@@ -1,0 +1,180 @@
+/* =====================================================================
+   MUNDIAL 2026 PREDICTOR — Design Tokens
+   Transformación ExO branding · extracted from index.html
+   ===================================================================== */
+
+:root {
+  /* ---------- BRAND COLORS ---------------------------------------- */
+  /* Deep navy is the primary brand surface (header, headings) */
+  --color-primary:        #1a3a52;
+  --color-primary-2:      #1e5a7a;     /* secondary stop in header gradient */
+  --color-primary-deep:   #14304a;     /* hover/pressed deepening */
+
+  /* Accent palette — used for CTAs, highlights, illustrative gradients */
+  --color-teal:           #00c9a7;     /* PRIMARY accent — buttons, success-y */
+  --color-teal-hover:     #00a88f;
+  --color-teal-tint:      #f0fffe;     /* focus background tint on inputs */
+  --color-cyan:           #00d9ff;     /* secondary accent — gradients */
+  --color-coral:          #ff6b5a;     /* destructive / confirm danger */
+  --color-purple:         #9d4edd;     /* tertiary accent */
+
+  /* ---------- NEUTRALS -------------------------------------------- */
+  --color-bg-page-1:      #f5f7fa;     /* page gradient start */
+  --color-bg-page-2:      #e9ecf1;     /* page gradient end */
+  --color-bg-light:       #f8f9fa;     /* light fill */
+  --color-surface:        #ffffff;     /* card / panel background */
+  --color-border:         #e0e0e0;
+  --color-text:           #1a1a1a;
+  --color-text-muted:     #666666;
+
+  /* ---------- SEMANTIC -------------------------------------------- */
+  --color-success-bg:     #e8f5e9;
+  --color-success-bd:     #4caf50;
+  --color-success-fg:     #2e7d32;
+
+  --color-info-bg:        #e3f2fd;
+  --color-info-bd:        #2196f3;
+  --color-info-fg:        #1565c0;
+
+  --color-error-bg:       #ffebee;
+  --color-error-bd:       #f44336;
+  --color-error-fg:       #c62828;
+
+  /* ---------- FOREGROUND TOKENS (semantic shorthands) ------------- */
+  --fg-1: var(--color-text);          /* primary body text */
+  --fg-2: var(--color-text-muted);    /* secondary / labels */
+  --fg-on-primary: #ffffff;           /* text on navy */
+  --fg-on-accent:  #ffffff;           /* text on teal */
+
+  /* ---------- GRADIENTS ------------------------------------------- */
+  --gradient-page:    linear-gradient(135deg, #f5f7fa 0%, #e9ecf1 100%);
+  --gradient-header:  linear-gradient(135deg, #1a3a52 0%, #1e5a7a 100%);
+  --gradient-feature: linear-gradient(135deg, #1a3a52 0%, #00c9a7 100%); /* navy → teal, used on stadium tiles */
+  --gradient-accent:  linear-gradient(135deg, #00c9a7 0%, #00d9ff 100%); /* teal → cyan */
+
+  /* ---------- TYPOGRAPHY: FAMILIES -------------------------------- */
+  /* The product currently relies on a system stack. Inter is loaded
+     as a high-quality fallback that mirrors Segoe UI metrics on
+     non-Windows machines. SUBSTITUTION FLAGGED in README. */
+  --font-sans:   'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --font-mono:   'JetBrains Mono', 'Courier New', ui-monospace, monospace;
+  --font-display: var(--font-sans);   /* same family, weight does the work */
+
+  /* ---------- TYPOGRAPHY: SCALE ----------------------------------- */
+  --fs-display: 32px;   /* hero stat values */
+  --fs-h1:      28px;   /* header title */
+  --fs-h2:      20px;   /* modal / section title */
+  --fs-h3:      16px;   /* card title */
+  --fs-body:    14px;   /* default UI text */
+  --fs-sm:      12px;   /* meta, captions, eyebrow */
+  --fs-xs:      10px;   /* match-phase pill */
+
+  /* ---------- TYPOGRAPHY: WEIGHTS --------------------------------- */
+  --fw-regular:  400;
+  --fw-medium:   500;
+  --fw-semibold: 600;
+  --fw-bold:     700;
+
+  /* ---------- TYPOGRAPHY: TRACKING -------------------------------- */
+  --tracking-tight:   -0.5px;   /* h1 */
+  --tracking-normal:  0;
+  --tracking-wide:    0.5px;    /* nav tabs */
+  --tracking-eyebrow: 1px;      /* stat labels */
+  --tracking-hero:    2px;      /* header subtitle */
+
+  /* ---------- RADII ----------------------------------------------- */
+  --radius-sm:   4px;   /* match-phase pill */
+  --radius-md:   6px;   /* buttons, inputs */
+  --radius-lg:   8px;   /* alerts */
+  --radius-xl:   10px;  /* stat cards */
+  --radius-2xl:  12px;  /* match cards, modals, stadium cards */
+
+  /* ---------- SHADOWS --------------------------------------------- */
+  --shadow-header: 0 4px 15px rgba(0, 0, 0, 0.10);
+  --shadow-card:   0 2px 8px  rgba(0, 0, 0, 0.05);  /* resting */
+  --shadow-hover:  0 8px 20px rgba(0, 0, 0, 0.10);  /* card hover */
+  --shadow-cta:    0 6px 12px rgba(0, 201, 167, 0.30); /* teal CTA hover */
+
+  /* ---------- SPACING --------------------------------------------- */
+  --space-1:  4px;
+  --space-2:  8px;
+  --space-3:  10px;
+  --space-4:  12px;
+  --space-5:  16px;
+  --space-6:  20px;
+  --space-7:  24px;
+  --space-8:  30px;
+  --space-9:  40px;
+
+  /* ---------- MOTION ---------------------------------------------- */
+  --ease:     ease;
+  --duration: 0.3s;
+  --hover-lift-sm: -2px;     /* buttons */
+  --hover-lift-md: -4px;     /* cards */
+
+  /* ---------- LAYOUT ---------------------------------------------- */
+  --container-max: 1200px;
+}
+
+/* =====================================================================
+   FONT FACES — loaded from Google Fonts CDN.
+   The original product uses a system stack ('Segoe UI', Tahoma, …).
+   Inter is loaded as a high-quality fallback that matches Segoe UI's
+   metrics on non-Windows machines. SUBSTITUTION — see README.
+   ===================================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+/* =====================================================================
+   SEMANTIC ELEMENT BASELINES
+   Drop these on a page and inherited typography just works.
+   ===================================================================== */
+body {
+  font-family: var(--font-sans);
+  font-size: var(--fs-body);
+  color: var(--fg-1);
+  background: var(--gradient-page);
+  line-height: 1.5;
+}
+
+h1 {
+  font-family: var(--font-display);
+  font-size: var(--fs-h1);
+  font-weight: var(--fw-semibold);
+  letter-spacing: var(--tracking-tight);
+  color: var(--color-primary);
+}
+
+h2 {
+  font-size: var(--fs-h2);
+  font-weight: var(--fw-semibold);
+  color: var(--color-primary);
+}
+
+h3 {
+  font-size: var(--fs-h3);
+  font-weight: var(--fw-semibold);
+  color: var(--fg-1);
+}
+
+p { color: var(--fg-1); }
+
+small,
+.eyebrow {
+  font-size: var(--fs-sm);
+  color: var(--fg-2);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-eyebrow);
+}
+
+code, pre, kbd, samp {
+  font-family: var(--font-mono);
+}
+
+/* Stat-style numeric display */
+.display {
+  font-size: var(--fs-display);
+  font-weight: var(--fw-bold);
+  color: var(--color-primary);
+  letter-spacing: var(--tracking-tight);
+}
+.display.accent { color: var(--color-teal); }
